@@ -1,0 +1,26 @@
+1 var (Занятие) --------Lesson.cs
+2 var (Аудитория) ------Auditoriya.cs
+3 var (Дисциплина) -----Disciplina.cs
+4 var (Группа) ---------Gryppa.cs
+5 var (Студент) --------Jurnal.cs
+6 var (Специальность)---Spetialization.cs
+7 var (Пара)------------Para.cs
+8 var (Смена)-----------Smena.cs
+9 var (Сторудник)-------Sotrudnik.cs
+10 var (Должность)------Dolznist.cs
+11 var (Подразделение)--Podrozdelenie.cs
+12 var (Организация)----Organization.cs
+13 var (Корпус)---------Korpus.cs
+14 var (Вид занятия)----TaskType.cs
+15 var (Оборудование)---Oborudovanie.cs
+16 var (КТП)------------KTP.cs
+17 var (Тема)-----------Theme.cs
+18 var (Параграф)-------Paragraph.cs
+19 var (ТемаВидЗанятия)-ThemeLessonType.cs
+20 var (Материал)-------Material.cs
+21 var (Компетенция) ---Competation.cs
+22 var (ШапкаКТП) - ----HatKTP.cs
+23 var (Внеурочка) -----OutLesson.cs
+24 var (Журнал) --------Jurnal.cs
+---------------------------------
+Время DateTimeMy
