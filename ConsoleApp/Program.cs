@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using ClassLibrary;
+using ConsoleApp;
 
 
 namespace ConsoleApp1
@@ -18,7 +19,8 @@ namespace ConsoleApp1
                 Console.Write("Какой класс Вы хотите создать: ");
                 switch (Console.ReadLine())
                 {
-                   
+                    case "Занятие": Printing.Print(ClassCreator.Lesson()); break;
+
                     default: Console.WriteLine("Такой класс не реализован"); break;
 
                 }
