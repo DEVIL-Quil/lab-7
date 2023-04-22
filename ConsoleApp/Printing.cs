@@ -32,6 +32,11 @@ namespace ConsoleApp
 
         public static void Print(Auditoriya auditoriya)
         {
+            Console.WriteLine(auditoriya.Название);
+            Print(auditoriya.Sotrudnik);
+            Console.WriteLine(auditoriya.Количество_посадочных_мест);
+            Console.WriteLine(auditoriya.Количество_окон);
+            Print(auditoriya.Oborudovanie);
 
         }
 
@@ -46,6 +51,11 @@ namespace ConsoleApp
         }
 
         public static void Print(TaskType taskType)
+        {
+
+        }
+
+        public static void Print(Oborudovanie oborudovanie)
         {
 
         }

@@ -53,7 +53,13 @@ namespace ConsoleApp
 
         public static Auditoriya Auditoriya()
         {
-            return Auditoriya();
+            Console.WriteLine("Введите название аудитории: ");
+            var Name = Console.ReadLine() ?? "Нет названия";
+            Console.WriteLine("Введите количество посадочных мест");
+            var Chairs = Convert.ToByte(Console.ReadLine() ?? "Нет названия");
+            Console.WriteLine("Введите количество окон в аудитории: ");
+            var Windows = Convert.ToByte(Console.ReadLine() ?? "Нет названия");
+            return new Auditoriya(Name, Sotrudnik(), Chairs, Windows, Oborudovanie());
         }
 
         public static Group Group()
@@ -70,6 +76,11 @@ namespace ConsoleApp
         public static TaskType TaskType()
         {
             return TaskType();
+
+        }
+        public static Oborudovanie Oborudovanie()
+        {
+            return Oborudovanie();
 
         }
     }
