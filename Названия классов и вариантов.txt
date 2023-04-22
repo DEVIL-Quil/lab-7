@@ -1,7 +1,7 @@
 1 var (Занятие) --------Lesson.cs
 2 var (Аудитория) ------Auditoriya.cs
 3 var (Дисциплина) -----Disciplina.cs
-4 var (Группа) ---------Gryppa.cs
+4 var (Группа) ---------Group.cs
 5 var (Студент) --------Jurnal.cs
 6 var (Специальность)---Spetialization.cs
 7 var (Пара)------------Para.cs
@@ -23,4 +23,3 @@
 23 var (Внеурочка) -----OutLesson.cs
 24 var (Журнал) --------Jurnal.cs
 ---------------------------------
-Время DateTimeMy
