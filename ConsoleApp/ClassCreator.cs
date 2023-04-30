@@ -43,7 +43,7 @@ namespace ConsoleApp
 
         public static Disciplina Disciplina()
         {
-            return Disciplina();           
+            return Disciplina();
         }
 
         public static Sotrudnik Sotrudnik()
@@ -69,8 +69,22 @@ namespace ConsoleApp
 
         public static Para Para()
         {
-            return Para();
+            Console.WriteLine("Введите время начала пары : ");
+            string timePara = Console.ReadLine();
+            TimeSpan startPara = DateTime.Parse(timePara).TimeOfDay;
 
+            Console.WriteLine("Введите время конца пары : ");
+            timePara = Console.ReadLine();
+            TimeSpan endPara = DateTime.Parse(timePara).TimeOfDay;
+
+            Console.WriteLine("Введите время начала перерыва : ");
+            timePara = Console.ReadLine();
+            TimeSpan startBreak = DateTime.Parse(timePara).TimeOfDay;
+
+            Console.WriteLine("Введите время конца перерыва : ");
+            timePara = Console.ReadLine();
+            TimeSpan endBreak = DateTime.Parse(timePara).TimeOfDay;
+            return new Para(startPara, endPara, startBreak, endBreak, Smena());
         }
 
         public static TaskType TaskType()
@@ -82,6 +96,10 @@ namespace ConsoleApp
         {
             return Oborudovanie();
 
+        }
+        public static Smena Smena()
+        {
+            return Smena();
         }
     }
 }

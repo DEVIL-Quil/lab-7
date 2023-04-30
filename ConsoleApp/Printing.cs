@@ -47,7 +47,11 @@ namespace ConsoleApp
 
         public static void Print(Para para)
         {
-
+            Console.WriteLine($"Время начала пары = {para.BeginPara}");
+            Console.WriteLine($"Время окончания пары = {para.EndPara}");
+            Console.WriteLine($"Время начала перерыва = {para.BeginBreak}");
+            Console.WriteLine($"Время окончания перерыва = {para.EndBreak}");
+            Print(para.Smena);
         }
 
         public static void Print(TaskType taskType)
@@ -56,6 +60,10 @@ namespace ConsoleApp
         }
 
         public static void Print(Oborudovanie oborudovanie)
+        {
+
+        }
+        public static void Print(Smena smena)
         {
 
         }
