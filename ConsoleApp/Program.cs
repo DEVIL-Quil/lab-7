@@ -21,6 +21,7 @@ namespace ConsoleApp1
                 {
                     case "Занятие": Printing.Print(ClassCreator.Lesson()); break;
 
+                    case "Пара": Printing.Print(ClassCreator.Para()); break;
 
                     case "Аудитория": Printing.Print(ClassCreator.Auditoriya()); break;
 
