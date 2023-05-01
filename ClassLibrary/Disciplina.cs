@@ -8,9 +8,13 @@ namespace ClassLibrary
 {
     public class Disciplina
     {
-        public Disciplina() 
+        public string Название { get; }
+        public string Сокращение { get; }
+        public Disciplina(string название , string сокращение ) 
         {
-        
+            Название = название;
+            Сокращение = сокращение;
+
         }
     }
 }

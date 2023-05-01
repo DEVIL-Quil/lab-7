@@ -22,7 +22,8 @@ namespace ConsoleApp
 
         public static void Print(Disciplina disciplina)
         {
-           
+            Console.WriteLine($"Название = {disciplina.Название}");
+            Console.WriteLine($"Cокращение = {disciplina.Сокращение}");
         }
 
         public static void Print(Sotrudnik sotrudnik)

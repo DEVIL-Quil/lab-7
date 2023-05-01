@@ -43,7 +43,11 @@ namespace ConsoleApp
 
         public static Disciplina Disciplina()
         {
-            return Disciplina();
+            Console.WriteLine("Введите название: ");
+            string Название = Console.ReadLine() ?? "Нет названия";
+            Console.WriteLine("Введите сокращение: ");
+            string Сокращение = Console.ReadLine() ?? "Нет сокращения";
+            return new Disciplina(Название, Сокращение);
         }
 
         public static Sotrudnik Sotrudnik()
@@ -70,19 +74,19 @@ namespace ConsoleApp
         public static Para Para()
         {
             Console.WriteLine("Введите время начала пары : ");
-            string timePara = Console.ReadLine();
+            string timePara = Console.ReadLine() ?? "Нет времени";
             TimeSpan startPara = DateTime.Parse(timePara).TimeOfDay;
 
             Console.WriteLine("Введите время конца пары : ");
-            timePara = Console.ReadLine();
+            timePara = Console.ReadLine() ?? "Нет времени";
             TimeSpan endPara = DateTime.Parse(timePara).TimeOfDay;
 
             Console.WriteLine("Введите время начала перерыва : ");
-            timePara = Console.ReadLine();
+            timePara = Console.ReadLine() ?? "Нет времени";
             TimeSpan startBreak = DateTime.Parse(timePara).TimeOfDay;
 
             Console.WriteLine("Введите время конца перерыва : ");
-            timePara = Console.ReadLine();
+            timePara = Console.ReadLine() ?? "Нет времени";
             TimeSpan endBreak = DateTime.Parse(timePara).TimeOfDay;
             return new Para(startPara, endPara, startBreak, endBreak, Smena());
         }
