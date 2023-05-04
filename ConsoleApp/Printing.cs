@@ -28,7 +28,10 @@ namespace ConsoleApp
 
         public static void Print(Sotrudnik sotrudnik)
         {
-
+            Console.WriteLine($"сотрудник.Фамилия = {sotrudnik.Фамилия}");
+            Console.WriteLine($"сотрудник.Имя = {sotrudnik.Имя}");
+            Console.WriteLine($"сотрудник.Отчество = {sotrudnik.Отчество}");
+            Print(sotrudnik.Doljnost);
         }
 
         public static void Print(Auditoriya auditoriya)
@@ -71,10 +74,18 @@ namespace ConsoleApp
 
         public static void Print(Korpus korpus)
         {
-            Console.WriteLine($"Название = { korpus.name }");
-            Console.WriteLine($"Адрес = { korpus.address }");
-            Console.WriteLine($"Комендант = { korpus.commandant }");
-            Console.WriteLine($"Организация = { korpus.organization }");
+            Console.WriteLine($"Название = { korpus.Name }");
+            Console.WriteLine($"Адрес = { korpus.Address }");
+            Print(korpus.Commandant);
+            Print(korpus.Organization);
+        }
+        public static void Print(Doljnost doljnost)
+        {
+
+        }
+        public static void Print(Organization organization)
+        {
+
         }
     }
 }

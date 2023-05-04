@@ -52,7 +52,14 @@ namespace ConsoleApp
 
         public static Sotrudnik Sotrudnik()
         {
-            return Sotrudnik();
+            Console.WriteLine("Введите Фамилию: ");
+            string фамилия = Console.ReadLine() ?? "Нет фамилии";
+            Console.WriteLine("Введите Имя: ");
+            string имя = Console.ReadLine() ?? "Нет имени";
+            Console.WriteLine("Введите Отчество: ");
+            string отчество = Console.ReadLine() ?? "Нет отчества";
+            return new Sotrudnik(фамилия, имя, отчество, Doljnost());
+
         }
 
         public static Auditoriya Auditoriya()
@@ -117,13 +124,15 @@ namespace ConsoleApp
             Console.WriteLine("Введите адрес: ");
             string address = Console.ReadLine() ?? "Нет адреса";
 
-            Console.WriteLine("Введите коммендата: ");
-            string commandant = Console.ReadLine() ?? "Нет имени";
-
-            Console.WriteLine("Введите организацию: ");
-            string organization = Console.ReadLine() ?? "Нет названия";
-
-            return new Korpus(name, address, commandant, organization);
+            return new Korpus(name, address, Sotrudnik(), Organization());
+        }
+        public static Doljnost Doljnost()
+        {
+            return Doljnost();
+        }
+        public static Organization Organization()
+        {
+            return Organization();
         }
     }
 }

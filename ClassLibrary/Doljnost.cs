@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    public class Organization
+    public class Doljnost
     {
-        public Organization() { }
+        public Doljnost()
+        {
+        }
     }
 }
