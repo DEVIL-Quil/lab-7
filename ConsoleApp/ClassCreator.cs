@@ -13,7 +13,7 @@ namespace ConsoleApp
     {
         public static Lesson Lesson()
         {
-            return new Lesson(Datetime(), Disciplina(), Sotrudnik(), Auditoriya(), Group(), Para(), TaskType(), Korpus());
+            return new Lesson(Datetime(), Disciplina(), Sotrudnik(), Auditoriya(), Group(), Para(), TaskType());
         }
 
         public static DateTime Datetime()
