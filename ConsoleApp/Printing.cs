@@ -66,7 +66,7 @@ namespace ConsoleApp
         }
         public static void Print(Smena smena)
         {
-
+            Console.WriteLine($"Смена = {smena.Name}");
         }
 
         public static void Print(Korpus korpus)
