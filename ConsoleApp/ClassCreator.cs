@@ -103,7 +103,10 @@ namespace ConsoleApp
         }
         public static Smena Smena()
         {
-            return Smena();
+            Console.WriteLine("Введите название смены");
+            string name = Console.ReadLine();
+            return new Smena(name);
+
         }
     }
 }
