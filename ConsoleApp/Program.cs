@@ -29,6 +29,8 @@ namespace ConsoleApp1
 
                     case "Корпус": Printing.Print(ClassCreator.Korpus()); break;
 
+                    case "Смена": Printing.Print(ClassCreator.Smena()); break;
+
                     default: Console.WriteLine("Такой класс не реализован"); break;
 
                 }
