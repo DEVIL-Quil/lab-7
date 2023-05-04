@@ -108,5 +108,22 @@ namespace ConsoleApp
             return new Smena(name);
 
         }
+
+        public static Korpus Korpus()
+        {
+            Console.WriteLine("Введите название: ");
+            string name = Console.ReadLine() ?? "Нет названия";
+
+            Console.WriteLine("Введите адрес: ");
+            string address = Console.ReadLine() ?? "Нет адреса";
+
+            Console.WriteLine("Введите коммендата: ");
+            string commandant = Console.ReadLine() ?? "Нет имени";
+
+            Console.WriteLine("Введите организацию: ");
+            string organization = Console.ReadLine() ?? "Нет названия";
+
+            return new Korpus(name, address, commandant, organization);
+        }
     }
 }
