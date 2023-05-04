@@ -144,7 +144,11 @@ namespace ConsoleApp
         }
         public static Spetialization Spetialization()
         {
-            return Spetialization();
+            Console.WriteLine("Введите название: ");
+            string Название = Console.ReadLine() ?? "Нет названия";
+            Console.WriteLine("Введите сокращение: ");
+            string Сокращение = Console.ReadLine() ?? "Нет сокращения";
+            return new Spetialization(Название, Сокращение);
         }
     }
 }

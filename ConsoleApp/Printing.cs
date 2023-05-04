@@ -93,9 +93,10 @@ namespace ConsoleApp
 
         }
 
-        public static void Print(Spetialization Spetialization)
+        public static void Print(Spetialization spetialization)
         {
-
+            Console.WriteLine($"специальность.Название = {spetialization.Название}");
+            Console.WriteLine($"специальность.Сокращение = {spetialization.Сокращение}");
         }
     }
 }
