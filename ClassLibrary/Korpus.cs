@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    class Korpus
+    public class Korpus
     {
-        public string name { get; }
-        public string address { get; }
-        public Sotrudnik commandant { get; }
-        public Organization organization { get; } 
+        public string Name { get; }
+        public string Address { get; }
+        public Sotrudnik Commandant { get; }
+        public Organization Organization { get; } 
 
-        public Corps(string name, string address, Sotrudnik commandant, Organization organization)
+        public Korpus(string name, string address, Sotrudnik commandant, Organization organization)
         {
-            this.name = name;
-            this.address = address;
-            this.commandant = commandant;
-            this.organization = organization;
+            this.Name = name;
+            this.Address = address;
+            this.Commandant = commandant;
+            this.Organization = organization;
         }
 
     }
