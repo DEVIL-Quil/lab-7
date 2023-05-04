@@ -75,7 +75,15 @@ namespace ConsoleApp
 
         public static Group Group()
         {
-            return Group();
+            Console.Write("Введите название группы: ");
+            var name = Console.ReadLine() ?? "Нет названия";
+            Console.Write("Введите сокращение: ");
+            var shortname = Console.ReadLine() ?? "Нет названия";
+            Console.Write("Введите численность: ");
+            var chislennost = Convert.ToByte(Console.ReadLine() ?? "0");
+            Console.Write("Введите год поступления:");
+            var yearPostyp = Convert.ToInt16(Console.ReadLine() ?? DateTime.Today.Year.ToString());
+            return new Group(name, shortname, chislennost, yearPostyp, Spetialization(), Sotrudnik());
         }
 
         public static Para Para()
@@ -133,6 +141,10 @@ namespace ConsoleApp
         public static Organization Organization()
         {
             return Organization();
+        }
+        public static Spetialization Spetialization()
+        {
+            return Spetialization();
         }
     }
 }

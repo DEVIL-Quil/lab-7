@@ -46,7 +46,12 @@ namespace ConsoleApp
 
         public static void Print(Group group)
         {
-           
+            Console.WriteLine(group.Name);
+            Console.WriteLine(group.Shortname);
+            Console.WriteLine(group.Chislennost);
+            Console.WriteLine(group.YearPostyp);
+            Print(group.Specialnost);
+            Print(group.ClassLeader);
         }
 
         public static void Print(Para para)
@@ -84,6 +89,11 @@ namespace ConsoleApp
 
         }
         public static void Print(Organization organization)
+        {
+
+        }
+
+        public static void Print(Spetialization Spetialization)
         {
 
         }
