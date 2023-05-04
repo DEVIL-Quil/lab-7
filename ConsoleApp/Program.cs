@@ -27,6 +27,8 @@ namespace ConsoleApp1
 
                     case "Дисциплина": Printing.Print(ClassCreator.Disciplina()); break;
 
+                    case "Смена": Printing.Print(ClassCreator.Smena()); break;
+
                     default: Console.WriteLine("Такой класс не реализован"); break;
 
                 }
