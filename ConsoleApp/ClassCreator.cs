@@ -13,7 +13,7 @@ namespace ConsoleApp
     {
         public static Lesson Lesson()
         {
-            return new Lesson(Datetime(), Disciplina(), Sotrudnik(), Auditoriya(), Group(), Para(), TaskType());
+            return new Lesson(Datetime(), Disciplina(), Sotrudnik(), Auditoriya(), Group(), Para(), TaskType(), Korpus());
         }
 
         public static DateTime Datetime()
@@ -104,6 +104,23 @@ namespace ConsoleApp
         public static Smena Smena()
         {
             return Smena();
+        }
+
+        public static Korpus Korpus()
+        {
+            Console.WriteLine("Введите название: ");
+            string name = Console.ReadLine() ?? "Нет названия";
+
+            Console.WriteLine("Введите адрес: ");
+            string address = Console.ReadLine() ?? "Нет адреса";
+
+            Console.WriteLine("Введите коммендата: ");
+            string commandant = Console.ReadLine() ?? "Нет имени";
+
+            Console.WriteLine("Введите организацию: ");
+            string organization = Console.ReadLine() ?? "Нет названия";
+
+            return new Korpus(name, address, commandant, organization);
         }
     }
 }

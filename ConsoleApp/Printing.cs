@@ -68,5 +68,13 @@ namespace ConsoleApp
         {
 
         }
+
+        public static void Print(Korpus korpus)
+        {
+            Console.WriteLine($"Название = { korpus.name }");
+            Console.WriteLine($"Адрес = { korpus.address }");
+            Console.WriteLine($"Комендант = { korpus.commandant }");
+            Console.WriteLine($"Организация = { korpus.organization }");
+        }
     }
 }
