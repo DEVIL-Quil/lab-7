@@ -134,5 +134,13 @@ namespace ConsoleApp
         {
             return Organization();
         }
+        public static Specialnost Specialnost()
+        {
+            Console.WriteLine("Введите название: ");
+            string Название = Console.ReadLine() ?? "Нет названия";
+            Console.WriteLine("Введите сокращение: ");
+            string Сокращение = Console.ReadLine() ?? "Нет сокращения";
+            return new Specialnost(Название, Сокращение);
+        }
     }
 }

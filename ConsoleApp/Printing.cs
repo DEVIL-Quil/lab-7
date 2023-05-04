@@ -87,5 +87,10 @@ namespace ConsoleApp
         {
 
         }
+        public static void Print(Specialnost specialnost)
+        {
+            Console.WriteLine($"специальность.Название = {specialnost.Название}");
+            Console.WriteLine($"специальность.Сокращение = {specialnost.Сокращение}");
+        }
     }
 }
