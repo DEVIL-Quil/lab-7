@@ -18,6 +18,7 @@ namespace ConsoleApp
             Print(lesson.Group);
             Print(lesson.Para);
             Print(lesson.TaskType);
+            Print(lesson.Podrozdelenie);
         }
 
         public static void Print(Disciplina disciplina)
