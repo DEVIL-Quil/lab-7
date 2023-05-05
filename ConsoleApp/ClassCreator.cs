@@ -52,7 +52,14 @@ namespace ConsoleApp
 
         public static Sotrudnik Sotrudnik()
         {
-            return new Sotrudnik();
+            Console.WriteLine("Введите Фамилию: ");
+            string фамилия = Console.ReadLine() ?? "Нет фамилии";
+            Console.WriteLine("Введите Имя: ");
+            string имя = Console.ReadLine() ?? "Нет имени";
+            Console.WriteLine("Введите Отчество: ");
+            string отчество = Console.ReadLine() ?? "Нет отчества";
+            return new Sotrudnik(фамилия, имя, отчество, Doljnost());
+
         }
 
         public static Auditoriya Auditoriya()
@@ -68,7 +75,15 @@ namespace ConsoleApp
 
         public static Group Group()
         {
-            return new Group();
+            Console.Write("Введите название группы: ");
+            var name = Console.ReadLine() ?? "Нет названия";
+            Console.Write("Введите сокращение: ");
+            var shortname = Console.ReadLine() ?? "Нет названия";
+            Console.Write("Введите численность: ");
+            var chislennost = Convert.ToByte(Console.ReadLine() ?? "0");
+            Console.Write("Введите год поступления:");
+            var yearPostyp = Convert.ToInt16(Console.ReadLine() ?? DateTime.Today.Year.ToString());
+            return new Group(name, shortname, chislennost, yearPostyp, Spetialization(), Sotrudnik());
         }
 
         public static Para Para()
@@ -108,15 +123,32 @@ namespace ConsoleApp
             return new Smena(name);
 
         }
-        public static Podrozdelenie Podrozdelenie()
+
+        public static Korpus Korpus()
         {
             Console.WriteLine("Введите название: ");
-            string Name = Console.ReadLine();
-            return new Podrozdelenie(Name, Sotrudnik(), Organization());
+            string name = Console.ReadLine() ?? "Нет названия";
+
+            Console.WriteLine("Введите адрес: ");
+            string address = Console.ReadLine() ?? "Нет адреса";
+
+            return new Korpus(name, address, Sotrudnik(), Organization());
+        }
+        public static Doljnost Doljnost()
+        {
+            return Doljnost();
         }
         public static Organization Organization()
         {
-            return new Organization();
+            return Organization();
+        }
+        public static Spetialization Spetialization()
+        {
+            Console.WriteLine("Введите название: ");
+            string Название = Console.ReadLine() ?? "Нет названия";
+            Console.WriteLine("Введите сокращение: ");
+            string Сокращение = Console.ReadLine() ?? "Нет сокращения";
+            return new Spetialization(Название, Сокращение);
         }
     }
 }

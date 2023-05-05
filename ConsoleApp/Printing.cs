@@ -29,7 +29,10 @@ namespace ConsoleApp
 
         public static void Print(Sotrudnik sotrudnik)
         {
-
+            Console.WriteLine($"сотрудник.Фамилия = {sotrudnik.Фамилия}");
+            Console.WriteLine($"сотрудник.Имя = {sotrudnik.Имя}");
+            Console.WriteLine($"сотрудник.Отчество = {sotrudnik.Отчество}");
+            Print(sotrudnik.Doljnost);
         }
 
         public static void Print(Auditoriya auditoriya)
@@ -44,7 +47,12 @@ namespace ConsoleApp
 
         public static void Print(Group group)
         {
-           
+            Console.WriteLine(group.Name);
+            Console.WriteLine(group.Shortname);
+            Console.WriteLine(group.Chislennost);
+            Console.WriteLine(group.YearPostyp);
+            Print(group.Specialnost);
+            Print(group.ClassLeader);
         }
 
         public static void Print(Para para)
@@ -69,15 +77,27 @@ namespace ConsoleApp
         {
             Console.WriteLine($"Смена = {smena.Name}");
         }
-        public static void Print(Podrozdelenie podrozdelenie)
+
+        public static void Print(Korpus korpus)
         {
-            Console.WriteLine($"подразделение.Название = {podrozdelenie.Name}");
-            Print(podrozdelenie.Rycovoditel);
-            Print(podrozdelenie.Organization);
+            Console.WriteLine($"Название = { korpus.Name }");
+            Console.WriteLine($"Адрес = { korpus.Address }");
+            Print(korpus.Commandant);
+            Print(korpus.Organization);
+        }
+        public static void Print(Doljnost doljnost)
+        {
+
         }
         public static void Print(Organization organization)
         {
 
+        }
+
+        public static void Print(Spetialization spetialization)
+        {
+            Console.WriteLine($"специальность.Название = {spetialization.Название}");
+            Console.WriteLine($"специальность.Сокращение = {spetialization.Сокращение}");
         }
     }
 }
