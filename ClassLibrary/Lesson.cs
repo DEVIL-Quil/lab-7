@@ -20,8 +20,9 @@ namespace ClassLibrary
         public Group Group { get; }
         public Para Para { get; }
         public TaskType TaskType { get; }
+        public Podrozdelenie Podrozdelenie{get;} 
 
-        public Lesson(DateTime dateTime, Disciplina disciplina, Sotrudnik sotrudnik, Auditoriya auditoria, Group group, Para para, TaskType tasktype)
+        public Lesson(DateTime dateTime, Disciplina disciplina, Sotrudnik sotrudnik, Auditoriya auditoria, Group group, Para para, TaskType tasktype, Podrozdelenie podrozdelenie)
         {
             DateTime datetime = dateTime;
             Disciplina = disciplina;
@@ -30,6 +31,7 @@ namespace ClassLibrary
             Group = group;
             Para = para;
             TaskType = tasktype;
+            Podrozdelenie = podrozdelenie;
         }
     }
 }

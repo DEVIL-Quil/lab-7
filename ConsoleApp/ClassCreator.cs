@@ -13,7 +13,7 @@ namespace ConsoleApp
     {
         public static Lesson Lesson()
         {
-            return new Lesson(Datetime(), Disciplina(), Sotrudnik(), Auditoriya(), Group(), Para(), TaskType());
+            return new Lesson(Datetime(), Disciplina(), Sotrudnik(), Auditoriya(), Group(), Para(), TaskType(),Podrozdelenie());
         }
 
         public static DateTime Datetime()
@@ -52,7 +52,7 @@ namespace ConsoleApp
 
         public static Sotrudnik Sotrudnik()
         {
-            return Sotrudnik();
+            return new Sotrudnik();
         }
 
         public static Auditoriya Auditoriya()
@@ -68,7 +68,7 @@ namespace ConsoleApp
 
         public static Group Group()
         {
-            return Group();
+            return new Group();
         }
 
         public static Para Para()
@@ -107,6 +107,16 @@ namespace ConsoleApp
             string name = Console.ReadLine();
             return new Smena(name);
 
+        }
+        public static Podrozdelenie Podrozdelenie()
+        {
+            Console.WriteLine("Введите название: ");
+            string Name = Console.ReadLine();
+            return new Podrozdelenie(Name, Sotrudnik(), Organization());
+        }
+        public static Organization Organization()
+        {
+            return new Organization();
         }
     }
 }

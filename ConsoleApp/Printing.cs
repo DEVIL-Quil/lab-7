@@ -18,6 +18,7 @@ namespace ConsoleApp
             Print(lesson.Group);
             Print(lesson.Para);
             Print(lesson.TaskType);
+            Print(lesson.Podrozdelenie);
         }
 
         public static void Print(Disciplina disciplina)
@@ -67,6 +68,16 @@ namespace ConsoleApp
         public static void Print(Smena smena)
         {
             Console.WriteLine($"Смена = {smena.Name}");
+        }
+        public static void Print(Podrozdelenie podrozdelenie)
+        {
+            Console.WriteLine($"подразделение.Название = {podrozdelenie.Name}");
+            Print(podrozdelenie.Rycovoditel);
+            Print(podrozdelenie.Organization);
+        }
+        public static void Print(Organization organization)
+        {
+
         }
     }
 }
