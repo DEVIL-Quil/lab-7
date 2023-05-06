@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+using System.Threading;
 using ClassLibrary;
 
 namespace ConsoleApp
@@ -18,7 +19,6 @@ namespace ConsoleApp
             Print(lesson.Group);
             Print(lesson.Para);
             Print(lesson.TaskType);
-            Print(lesson.Podrozdelenie);
         }
 
         public static void Print(Disciplina disciplina)
@@ -45,7 +45,7 @@ namespace ConsoleApp
 
         }
 
-        public static void Print(Group group)
+        public static void Print(ClassLibrary.Group group)
         {
             Console.WriteLine(group.Name);
             Console.WriteLine(group.Shortname);
@@ -80,8 +80,8 @@ namespace ConsoleApp
 
         public static void Print(Korpus korpus)
         {
-            Console.WriteLine($"Название = { korpus.Name }");
-            Console.WriteLine($"Адрес = { korpus.Address }");
+            Console.WriteLine($"Название = {korpus.Name}");
+            Console.WriteLine($"Адрес = {korpus.Address}");
             Print(korpus.Commandant);
             Print(korpus.Organization);
         }

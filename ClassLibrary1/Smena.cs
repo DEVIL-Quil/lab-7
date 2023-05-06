@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace ClassLibrary
 {
-    public class Doljnost
+    public class Smena
     {
-        public Doljnost()
+        public string Name { get; }
+        public Smena(string name)
         {
+            Name = name;
         }
+
     }
 }

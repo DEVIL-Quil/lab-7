@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 // https://docs.google.com/document/d/1qCEMkbMRvvHP361IFDeWgSpHfVRUp6BV67nrsjl3fSw/edit
 
 namespace ClassLibrary
@@ -11,7 +11,7 @@ namespace ClassLibrary
     {
         public string Название { get; }
         public string Сокращение { get; }
-        public Disciplina(string название , string сокращение ) 
+        public Disciplina(string название, string сокращение)
         {
             Название = название;
             Сокращение = сокращение;

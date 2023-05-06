@@ -1,9 +1,9 @@
-using ClassLibrary;
+﻿using ClassLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 //https://docs.google.com/document/d/1KZXfKJussGflgWnWylGbFrwmdcn3liYKIsgmtxB1mN0/edit
 
 namespace ClassLibrary
@@ -20,9 +20,8 @@ namespace ClassLibrary
         public Group Group { get; }
         public Para Para { get; }
         public TaskType TaskType { get; }
-        public Podrozdelenie Podrozdelenie{get;} 
 
-        public Lesson(DateTime dateTime, Disciplina disciplina, Sotrudnik sotrudnik, Auditoriya auditoria, Group group, Para para, TaskType tasktype, Podrozdelenie podrozdelenie)
+        public Lesson(DateTime dateTime, Disciplina disciplina, Sotrudnik sotrudnik, Auditoriya auditoria, Group group, Para para, TaskType tasktype)
         {
             DateTime datetime = dateTime;
             Disciplina = disciplina;
@@ -31,7 +30,7 @@ namespace ClassLibrary
             Group = group;
             Para = para;
             TaskType = tasktype;
-            Podrozdelenie = podrozdelenie;
+           
         }
     }
 }
