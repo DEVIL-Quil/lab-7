@@ -150,5 +150,24 @@ namespace ConsoleApp
             string Сокращение = Console.ReadLine() ?? "Нет сокращения";
             return new Spetialization(Название, Сокращение);
         }
+        public static Student Student()
+        {
+            Console.WriteLine("Введите фамилию: ");
+            string фамилия = Console.ReadLine() ?? "Нет фамилии";
+            Console.WriteLine("Введите имя: ");
+            string имя = Console.ReadLine() ?? "Нет имени";
+            Console.WriteLine("Введите отчество: ");
+            string отчество = Console.ReadLine() ?? "Нет отчества";
+            Console.WriteLine("Введите дату рождения формата dd.mm.yyyy: ");
+            if (DateTime.TryParse(Console.ReadLine(), out DateTime датаРождения))
+            {
+                return new Student(фамилия, имя, отчество, Group(), датаРождения);
+            }
+            else
+            {
+                return new Student(фамилия, имя, отчество, Group());
+            }
+        }
+
     }
 }

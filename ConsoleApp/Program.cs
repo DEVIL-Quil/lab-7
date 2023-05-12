@@ -37,6 +37,8 @@ namespace ConsoleApp1
 
                     case "Специальность": Printing.Print(ClassCreator.Spetialization()); break;
 
+                    case "Студент": Printing.Print(ClassCreator.Student()); break;
+
                     default: Console.WriteLine("Такой класс не реализован"); break;
 
                 }
