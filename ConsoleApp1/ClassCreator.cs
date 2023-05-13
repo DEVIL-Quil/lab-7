@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+using System.Threading;
 using System.Xml.Linq;
 using ClassLibrary;
 
@@ -13,7 +14,7 @@ namespace ConsoleApp
     {
         public static Lesson Lesson()
         {
-            return new Lesson(Datetime(), Disciplina(), Sotrudnik(), Auditoriya(), Group(), Para(), TaskType(),Podrozdelenie());
+            return new Lesson(Datetime(), Disciplina(), Sotrudnik(), Auditoriya(), Group(), Para(), TaskType());
         }
 
         public static DateTime Datetime()
@@ -73,7 +74,7 @@ namespace ConsoleApp
             return new Auditoriya(Name, Sotrudnik(), Chairs, Windows, Oborudovanie());
         }
 
-        public static Group Group()
+        public static ClassLibrary.Group Group()
         {
             Console.Write("Введите название группы: ");
             var name = Console.ReadLine() ?? "Нет названия";
@@ -83,7 +84,7 @@ namespace ConsoleApp
             var chislennost = Convert.ToByte(Console.ReadLine() ?? "0");
             Console.Write("Введите год поступления:");
             var yearPostyp = Convert.ToInt16(Console.ReadLine() ?? DateTime.Today.Year.ToString());
-            return new Group(name, shortname, chislennost, yearPostyp, Spetialization(), Sotrudnik());
+            return new ClassLibrary.Group(name, shortname, chislennost, yearPostyp, Spetialization(), Sotrudnik());
         }
 
         public static Para Para()
