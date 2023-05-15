@@ -99,5 +99,13 @@ namespace ConsoleApp
             Console.WriteLine($"специальность.Название = {spetialization.Название}");
             Console.WriteLine($"специальность.Сокращение = {spetialization.Сокращение}");
         }
+        public static void Print(Student student)
+        {
+            Console.WriteLine($"студент.Фамилия = {student.Фамилия}");
+            Console.WriteLine($"студент.Имя = {student.Имя}");
+            Console.WriteLine($"студент.Отчество = {student.Отчество}");
+            Console.WriteLine($"студент.Дата_рождения = {student.ДатаРождения.ToShortDateString()}");
+            Print(student.Group);
+        }
     }
 }
